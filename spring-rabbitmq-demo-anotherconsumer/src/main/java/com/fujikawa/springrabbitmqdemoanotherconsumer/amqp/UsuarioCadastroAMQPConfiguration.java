@@ -37,7 +37,7 @@ public class UsuarioCadastroAMQPConfiguration {
     public Queue fila() {
 
         return QueueBuilder
-            .nonDurable("usuario.cadastrado.enviaremail")
+            .nonDurable("usuario.cadastrado.fazeroutracoisa")
             .build();
     }
 
