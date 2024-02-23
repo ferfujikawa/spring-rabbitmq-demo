@@ -28,7 +28,7 @@ public class SpringRabbitmqDemoProduccerApplication implements CommandLineRunner
 
 	private void cadastrarUsuario() {
 		
-		UsuarioDTO usuario = new UsuarioDTO("Usuário 3", "padrao123", "usuario1@email.com");
+		UsuarioDTO usuario = new UsuarioDTO("Usuário 3", "padrao123", "");
 		service.cadastrar(usuario);
 	}
 
