@@ -8,7 +8,7 @@ import com.fujikawa.springrabbitmqdemoconsumer.dtos.UsuarioDTO;
 @Component
 public class UsuarioCadastradoListener {
 
-    @RabbitListener(queues = "usuario.cadastrado")
+    @RabbitListener(queues = "usuario.cadastrado.enviaremail")
     public void receberMensagem(UsuarioDTO usuario) {
         
         String mensagem = String.format(
