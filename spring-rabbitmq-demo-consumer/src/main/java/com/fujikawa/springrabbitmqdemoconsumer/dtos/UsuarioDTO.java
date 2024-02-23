@@ -12,6 +12,8 @@ public class UsuarioDTO {
 
     private String email;
 
+    protected UsuarioDTO() {}
+
     public UsuarioDTO(UUID id, String login, String senha, String email) {
         this.id = id;
         this.login = login;
@@ -33,11 +35,6 @@ public class UsuarioDTO {
 
     public String getEmail() {
         return email;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario [id=" + id + ", login=" + login + ", senha=" + senha + ", email=" + email + "]";
     }
 }
 
