@@ -45,7 +45,7 @@ public class UsuarioCadastroAMQPConfiguration {
     public FanoutExchange fanoutExchange() {
 
         return ExchangeBuilder
-            .fanoutExchange("usuario.cadastrado")
+            .fanoutExchange("usuario.cadastrado.ex")
             .build();
     }
 
