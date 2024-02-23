@@ -4,6 +4,8 @@ Projeto para prática de uso do RabbitMQ.
 
 ## Instalação do RabbitMQ em um container Docker
 
+Dentro do diretório docker/rabbit, utilize o docker-compose.yml para subir o container do RabbitMQ, executando o seguinte comando:
+
 ```bash
-docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
+docker compose up -d
 ```
