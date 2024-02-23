@@ -35,4 +35,9 @@ public class Usuario {
     public String getEmail() {
         return email;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario [id=" + id + ", login=" + login + ", senha=" + senha + ", email=" + email + "]";
+    }
 }
