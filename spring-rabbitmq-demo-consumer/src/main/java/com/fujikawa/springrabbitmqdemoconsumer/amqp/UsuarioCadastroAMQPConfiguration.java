@@ -38,6 +38,15 @@ public class UsuarioCadastroAMQPConfiguration {
 
         return QueueBuilder
             .nonDurable("usuario.cadastrado.enviaremail")
+            .deadLetterExchange("usuario.cadastrado.dlx")
+            .build();
+    }
+
+    @Bean
+    public Queue filaDlq() {
+
+        return QueueBuilder
+            .nonDurable("usuario.cadastrado.enviaremail-dlq")
             .build();
     }
 
@@ -50,11 +59,27 @@ public class UsuarioCadastroAMQPConfiguration {
     }
 
     @Bean
+    public FanoutExchange deadLetterExchange() {
+
+        return ExchangeBuilder
+            .fanoutExchange("usuario.cadastrado.dlx")
+            .build();
+    }
+
+    @Bean
     public Binding binding() {
 
         return BindingBuilder
             .bind(fila())
             .to(fanoutExchange());
+    }
+
+    @Bean
+    public Binding bindingDlx() {
+
+        return BindingBuilder
+            .bind(filaDlq())
+            .to(deadLetterExchange());
     }
 
     @Bean
