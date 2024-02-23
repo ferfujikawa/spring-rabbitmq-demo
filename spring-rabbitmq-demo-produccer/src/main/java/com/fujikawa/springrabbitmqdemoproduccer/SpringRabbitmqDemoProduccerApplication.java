@@ -4,7 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.fujikawa.springrabbitmqdemoproduccer.entities.Usuario;
+import com.fujikawa.springrabbitmqdemoproduccer.dtos.UsuarioDTO;
 import com.fujikawa.springrabbitmqdemoproduccer.services.CadastroUsuarioService;
 
 @SpringBootApplication
@@ -28,7 +28,7 @@ public class SpringRabbitmqDemoProduccerApplication implements CommandLineRunner
 
 	private void cadastrarUsuario() {
 		
-		Usuario usuario = new Usuario("Usuário 3", "padrao123", "usuario1@email.com");
+		UsuarioDTO usuario = new UsuarioDTO("Usuário 3", "padrao123", "usuario1@email.com");
 		service.cadastrar(usuario);
 	}
 

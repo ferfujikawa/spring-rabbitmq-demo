@@ -1,8 +1,8 @@
-package com.fujikawa.springrabbitmqdemoproduccer.entities;
+package com.fujikawa.springrabbitmqdemoproduccer.dtos;
 
 import java.util.UUID;
 
-public class Usuario {
+public class UsuarioDTO {
 
     private UUID id;
 
@@ -12,7 +12,7 @@ public class Usuario {
 
     private String email;
 
-    public Usuario(String login, String senha, String email) {
+    public UsuarioDTO(String login, String senha, String email) {
 
         this.id = UUID.randomUUID();
         this.login = login;

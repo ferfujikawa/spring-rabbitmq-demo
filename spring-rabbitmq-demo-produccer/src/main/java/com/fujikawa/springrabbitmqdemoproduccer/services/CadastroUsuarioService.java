@@ -3,7 +3,7 @@ package com.fujikawa.springrabbitmqdemoproduccer.services;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
-import com.fujikawa.springrabbitmqdemoproduccer.entities.Usuario;
+import com.fujikawa.springrabbitmqdemoproduccer.dtos.UsuarioDTO;
 
 @Service
 public class CadastroUsuarioService {
@@ -14,14 +14,14 @@ public class CadastroUsuarioService {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public Usuario cadastrar(Usuario usuario) {
+    public UsuarioDTO cadastrar(UsuarioDTO usuario) {
 
         enviarParaRabbit(usuario);
 
         return usuario;
     }
 
-    private void enviarParaRabbit(Usuario usuario) {
+    private void enviarParaRabbit(UsuarioDTO usuario) {
 
         rabbitTemplate.convertAndSend("usuario.cadastrado", usuario);
    }
