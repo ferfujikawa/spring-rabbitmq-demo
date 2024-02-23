@@ -1,23 +1,23 @@
-package com.fujikawa.springrabbitmqdemo;
+package com.fujikawa.springrabbitmqdemoproduccer;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.fujikawa.springrabbitmqdemo.entities.Usuario;
-import com.fujikawa.springrabbitmqdemo.services.CadastroUsuarioService;
+import com.fujikawa.springrabbitmqdemoproduccer.entities.Usuario;
+import com.fujikawa.springrabbitmqdemoproduccer.services.CadastroUsuarioService;
 
 @SpringBootApplication
-public class SpringRabbitmqDemoApplication implements CommandLineRunner {
+public class SpringRabbitmqDemoProduccerApplication implements CommandLineRunner {
 
 	private CadastroUsuarioService service;
 
-	public SpringRabbitmqDemoApplication(CadastroUsuarioService service) {
+	public SpringRabbitmqDemoProduccerApplication(CadastroUsuarioService service) {
 		this.service = service;
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringRabbitmqDemoApplication.class, args);
+		SpringApplication.run(SpringRabbitmqDemoProduccerApplication.class, args);
 	}
 
 	@Override

@@ -1,10 +1,10 @@
-package com.fujikawa.springrabbitmqdemo.services;
+package com.fujikawa.springrabbitmqdemoproduccer.services;
 
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
-import com.fujikawa.springrabbitmqdemo.entities.Usuario;
+import com.fujikawa.springrabbitmqdemoproduccer.entities.Usuario;
 
 @Service
 public class CadastroUsuarioService {

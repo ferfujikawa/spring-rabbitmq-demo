@@ -1,4 +1,4 @@
-package com.fujikawa.springrabbitmqdemo.entities;
+package com.fujikawa.springrabbitmqdemoproduccer.entities;
 
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package com.fujikawa.springrabbitmqdemo.amqp;
+package com.fujikawa.springrabbitmqdemoproduccer.amqp;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.QueueBuilder;
