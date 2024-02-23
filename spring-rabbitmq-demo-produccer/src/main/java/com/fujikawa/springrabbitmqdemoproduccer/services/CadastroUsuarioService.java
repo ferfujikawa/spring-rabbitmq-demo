@@ -23,6 +23,6 @@ public class CadastroUsuarioService {
 
     private void enviarParaRabbit(UsuarioDTO usuario) {
 
-        rabbitTemplate.convertAndSend("usuario.cadastrado", usuario);
+        rabbitTemplate.convertAndSend("usuario.cadastrado.ex", "", usuario);
    }
 }
