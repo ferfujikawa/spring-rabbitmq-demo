@@ -1,6 +1,5 @@
 package com.fujikawa.springrabbitmqdemoproduccer.services;
 
-import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
@@ -24,9 +23,6 @@ public class CadastroUsuarioService {
 
     private void enviarParaRabbit(Usuario usuario) {
 
-        String dados = usuario.toString();
-        System.out.println(dados);
-        Message mensagem = new Message(dados.getBytes());
-        rabbitTemplate.send("usuario.cadastrado", mensagem);
-    }
+        rabbitTemplate.convertAndSend("usuario.cadastrado", usuario);
+   }
 }
